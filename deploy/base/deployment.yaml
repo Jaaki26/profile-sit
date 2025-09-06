@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile-site
+  namespace: profile
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: profile-site
+  template:
+    metadata:
+      labels:
+        app: profile-site
+    spec:
+      containers:
+      - name: profile-site
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
