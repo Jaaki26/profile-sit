@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-org/profile-site-gitops-repo'
-    targetRevision: HEAD
+    repoURL: https://github.com/your-org/profile-site
     path: deploy/overlays/prod
+    targetRevision: HEAD
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: profile
   syncPolicy:
     automated:
